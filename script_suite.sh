@@ -4,11 +4,12 @@
 
 TXT='\033[0;36m'
 QST='\033[1;35m'
+END='\033[1;33m'
 NC='\033[0m'
 
 # Installation Apache
 
-echo -e "${QST}Veux-tu installer le serveur Apache ? ${NC}"
+echo -e "${QST}Veux-tu installer le serveur Apache ? (O/N) ${NC}"
 read apache
 
     case "$apache" in
@@ -24,7 +25,7 @@ read apache
 
 # Installation Python
 
-echo -e "${QST}Veux-tu installer Python ? ${NC}"
+echo -e "${QST}Veux-tu installer Python ? (O/N) ${NC}"
 read python
 
     case "$python" in
@@ -38,6 +39,8 @@ read python
       read python;;
     esac
 
+# THE END
+
 sleep 1
 echo
-echo -e "${TXT}See ya ;) ${NC}"
+echo -e "${END}See ya ;) ${NC}"
